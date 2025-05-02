@@ -1,5 +1,5 @@
 <?php
-$firstname = readline("Firstname:");
+$Firstname = readline("Firstname:");
 $lastname = readline("Lastname:");
 $mobilenumber = readline("Mobile Number:");
 $email = readline("Email:");
@@ -8,7 +8,7 @@ $resgisterfirstname = $firstname;
 $resgisterlastname = $lastname;
 $resgistermobilenumber = $mobilenumber;
 $resgisteremail = $email;
-$resgisterpassword = $password;
+$resgisterpassword = $password; 
  
 if (!is_numeric($mobilenumber)) {
     echo "Mobile Number must be in Numeric!";
