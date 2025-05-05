@@ -1,10 +1,11 @@
 <?php
-$student = readline("Fullname:");
+echo "2025 EXAMINATION RESULT\n";
+$name = readline("Fullname:");
 $exam_number = readline("Exam Number:");
 $gender = readline("Gender:");
 
-if ($student == "" || $exam_number == "" || $gender == "") {
-    echo "Please make sure you filled all input";
+if ($name == "" || $exam_number == "" || $gender == "") {
+    echo "Please make sure you filled all input!";
 } elseif (!is_numeric($exam_number)) {
     echo "Incorrect Exam Number";
 } else {
@@ -14,9 +15,10 @@ if ($student == "" || $exam_number == "" || $gender == "") {
             "Jonathan Success" => "B3",
             "Victory Sam" => "A1",
         );
-        echo $grades["$student"];
+        echo "---RESULT---\n";
+        echo $grades["$name"];
     } else {
-        echo "Incorrect Please try again:";
+        echo "Incorrect Please try again!";
     }
 }
 ?>
