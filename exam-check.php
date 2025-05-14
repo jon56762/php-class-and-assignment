@@ -1,24 +1,23 @@
 <?php
 echo "2025 EXAMINATION RESULT\n";
-$name = readline("Fullname:");
-$exam_number = readline("Exam Number:");
-$gender = readline("Gender:");
+$student = [
+    'Success' => 'A1',
+    'Emmanuel' => 'C3',
+    'Kindrick' => 'B2'
+];
+//Delete
+//unset($student['Success']);
+//Read
+//echo $student['Success'];
+//update
+//$student['Success'] = 'w3';
+//$student['Success'] = null;
 
-if ($name == "" || $exam_number == "" || $gender == "") {
-    echo "Please make sure you filled all input!";
-} elseif (!is_numeric($exam_number)) {
-    echo "Incorrect Exam Number";
+$name = readline("Name:");
+
+if ($name == "") {
+    echo "Please fill the input";
 } else {
-    if ($gender == "Male" || $gender == "Female" && $exam_number == "001001" || $exam_number == "001002" || $exam_number == "001003") {
-        $grades = array(
-            "Divine Okoro" => "F9",
-            "Jonathan Success" => "B3",
-            "Victory Sam" => "A1",
-        );
-        echo "---RESULT---\n";
-        echo $grades["$name"];
-    } else {
-        echo "Incorrect Please try again!";
-    }
+    echo $student["$name"];   
 }
 ?>
