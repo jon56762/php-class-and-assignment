@@ -14,7 +14,7 @@ for ($solve=0; $solve < 7; $solve++) {
 // applying the calucated xvalues to the array
 echo "x :";
 for ($solve=0; $solve < 7; $solve++) { 
-    echo $xvalues[$solve]. "|";
+    echo "{$xvalues[$solve]}|";
 }
 
 echo "\n";
@@ -23,7 +23,7 @@ echo "\n";
 
 echo "xsquare :";
 for ($solve=0; $solve < 7; $solve++) { 
-    echo $xsquare[$solve] . "|";
+    echo "{$xsquare[$solve]} |";
 }
 
 echo "\n";
@@ -32,5 +32,5 @@ echo "\n";
 
 echo "y :";
 for ($solve=0; $solve < 7; $solve++) { 
-    echo $y[$solve]. "|";
+    echo "{$y[$solve]} |";
 }

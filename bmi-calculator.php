@@ -4,8 +4,6 @@ $height = readline("Enter Your Height (Meters):");
 
 if ($weight === "" || $height === "") {
     echo "Please Input your Weight & Height!!!";
-}elseif (!is_numeric($weight) || !is_numeric($height)){
-    echo "Invailed input (Only numbers are required)";
 }else {   
     $bmi = $weight / ($height ** 2);
     $bmi = round($bmi, 2);
