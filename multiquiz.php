@@ -76,9 +76,68 @@ $quiz_question = [
 echo "----------Basic Quiz Questions-----------\n";
 echo "Select any Subject among this 3: (Mathematics, English, Biology)\n";
 
-$input = readline("Input your subject:");
 
-if ($input == "") {
+$proceed_qa = true;
+
+$available_subjects = ["Mathematics", "English", "Biology"];
+$score = 2;
+$x = 1;
+// echo(count($quiz_question["Mathematics"]));
+while($proceed_qa){
+    $input = readline("Input your subject: ");
+    $subject_exist = in_array($input, $available_subjects)?"it_exist":"non_found";
+
+    if($subject_exist === "non_found"){
+        $proceed_qa = false;
+        echo("this subject does not exist");
+        break;
+    }
+    $current_question_length = count($quiz_question[$input]);
+
+    do{
+        $question = $quiz_question[$input][$x]["question"];
+        echo $question;
+        $x++;
+        $ans = readline(": ");
+        if ($ans == $question["answer"]) {
+            echo "You got it correct";
+        }
+        // echo($quiz_question[$input][$x]["answer"]);
+        // echo($ans == $quiz_question[$input][$x]["answer"]?"correct \n":"wrong \n");
+    }while($x <= $current_question_length);
+
+    // echo "Do you want to continue? input Yes to continue / No to exist \n";
+
+    // $comfirm = readline("Input your option (Yes/NO):");
+    // if ($comfirm == "Yes") {
+        
+    // } elseif ($comfirm == "No") {
+    //     if ($ans = $quiz_question[$input][$x]['answer']) {
+    //         echo "Your total score = $score";
+    //     }
+    //     $ans = $quiz_question[$input][$x]["answer"]?"$score \n":"wrong \n";
+    //     echo $ans;
+        
+    // }
+
+
+}
+
+
+
+// for ($i=0; $i <= $quiz_question[$input]; $i--) { 
+//     $current_question = $quiz_question[$input];
+
+//     echo $current_question[1]['question'];
+// }
+
+// $a = 0;
+// do {
+//     $current_question = $quiz_question[$input];
+//     echo $current_question[2]['question'];
+//     $a++;
+// } while ($a <= $quiz_question[$input]);
+/*if ($input == "") {
     echo "Select any subject of your choice!!!";
 } elseif ($quiz_question["$input"]) {
     $userselect = $quiz_question[$input];
@@ -98,4 +157,4 @@ if ($input == "") {
     }
 } else {
     echo "Incorrect";
-}
+}*/

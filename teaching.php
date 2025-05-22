@@ -45,16 +45,44 @@
 //     echo "Its not met";
 // }
 
-$age = readline("input age:");
+// $age = readline("input age:");
 
-switch ($age) {
-    case 18:
-    case 17:
-    case 16:
-        echo "Adult";
-       break;         
+// switch ($age) {
+//     case 18:
+//     case 17:
+//     case 16:
+//         echo "Adult";
+//        break;         
     
-    default:
-        # code...
-        break;
+//     default:
+//         # code...
+//         break;
+// }
+
+//$fruit = ['apple', 'orange', 'mango'];
+
+// $student = [
+//     'name' => 'Mark',
+//     'age' => 36
+// ];
+
+// unset($student['age']);
+// $student['name'] = 'Success';
+// echo $student['name'];
+
+$student = [
+    'Success' => 'A1',
+    'Harrison' => 'F9',
+    'Faith' => 'C3'
+];
+
+$input = readline("Input your name: ");
+
+if ($input == "") {
+    echo "Please input your name";
+} elseif ($student[$input]) {
+    $check = $student[$input];
+    echo "You score $check";
+} else {
+    echo "User not found";
 }
