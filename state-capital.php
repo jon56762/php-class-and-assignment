@@ -276,5 +276,5 @@ $state_capital = [
 // }
 
 foreach ($state_capital as $key => $value) {
-    echo "{$value['state']}\n";
+    echo "{$value['state']}, {$value['capital']}\n";
 }
