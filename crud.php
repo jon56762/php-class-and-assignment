@@ -7,7 +7,8 @@ while (true) {
     echo "1. Add Student\n";
     echo "2. View All Students\n";
     echo "3. Search Student\n";
-    echo "4. Exit\n";
+    echo "4. Delete Student\n";
+    echo "5. Exit\n";
 
     $input = readline("Select any you want: ");
 
@@ -38,6 +39,23 @@ while (true) {
             }
             break;
         case 4:
+            $delete = readline("Enter student name: ");
+            $deleted = false;
+
+            $deletedstudent =[];
+            foreach ($students as $user) {
+                if (strtolower($user['name']) !== strtolower($delete)) {
+                    $deletedstudent[] = $user;
+                }else {
+                    $deleted = true;
+                }
+            }
+            if ($deleted) {
+                $students = $deletedstudent;
+                echo "$delete Successfully\n";
+            }
+            break;    
+        case 5:
             echo "Goodbye";
             exit;            
         default:
