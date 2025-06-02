@@ -7,8 +7,9 @@ while (true) {
     echo "1. Search state details\n";
     echo "2. Find states by mineral resources\n";
     echo "3. Show total population\n";
-    echo "4. Show higest and lowest states population\n";
-    echo "5. Exit\n";
+    echo "4. Show average population\n";
+    echo "5. Show higest and lowest states population\n";
+    echo "6. Exit\n";
 
     $input = readline("Select your option(1-5): ");
 
@@ -55,16 +56,21 @@ while (true) {
         case 3:
             $total = 0;
             foreach ($state_capital as $state) {
-                $average = count($state);
                 $total += $state['population'];
-                $averagetotal = $total / $average;
-                $answer = round($averagetotal);
             }
-            echo "The avarage populaion of Nigeria: " . number_format($answer) ."\n";
             echo "Total Population of Nigeria: " . number_format($total) . "\n";
             break;    
         
         case 4:
+            $total = 0;
+            foreach ($state_capital as $state) {
+                $average = count($state);
+                $total += $state['population'];
+                $averagepopulation = $total / $average;
+            }
+            echo "The avarage populaion of Nigeria: " . number_format($averagepopulation) ."\n";
+            break;    
+        case 5:
             
             $maxstate = '';
             $minstate = '';
@@ -97,7 +103,7 @@ while (true) {
 
             break;   
         
-        case 5:
+        case 6:
             exit('Thanks!');
             break;    
 
