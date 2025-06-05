@@ -8,7 +8,7 @@ while ($a <= 65) {
         echo ";";
     } 
     $a++;
-
+    echo "\n";
     $b = 15;
     while ($b <= 100) {
         if ($a == $b) {

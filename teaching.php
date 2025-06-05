@@ -70,19 +70,62 @@
 // $student['name'] = 'Success';
 // echo $student['name'];
 
-$student = [
-    'Success' => 'A1',
-    'Harrison' => 'F9',
-    'Faith' => 'C3'
-];
+// $student = [
+//     'Success' => 'A1',
+//     'Harrison' => 'F9',
+//     'Faith' => 'C3'
+// ];
 
-$input = readline("Input your name: ");
+// $input = readline("Input your name: ");
 
-if ($input == "") {
-    echo "Please input your name";
-} elseif ($student[$input]) {
-    $check = $student[$input];
-    echo "You score $check";
-} else {
-    echo "User not found";
+// if ($input == "") {
+//     echo "Please input your name";
+// } elseif ($student[$input]) {
+//     $check = $student[$input];
+//     echo "You score $check";
+// } else {
+//     echo "User not found";
+// }
+
+// $x_start = -3;
+// $x_end = 3;
+
+// echo "x |";
+// for ($x = $x_start; $x <= $x_end; $x++) {
+//     echo "$x |";
+// }
+
+// echo "\n";
+// echo "x^2 |";
+// for ($x=$x_start; $x <= $x_end ; $x++) { 
+//     $xsquare = $x ** 2;
+//     echo "$xsquare |";
+// }
+
+// echo "\n";
+
+// echo "x |";
+// for ($x = $x_start; $x <= $x_end; $x++) {
+//     echo "$x |";
+// }
+
+// echo "\n";
+
+// echo "-2 |";
+// for ($x=$x_start; $x <= $x_end ; $x++) { 
+//     echo "-2 |";
+// }
+
+// echo "\n";
+
+// echo "y |";
+// for ($x=$x_start; $x <= $x_end ; $x++) { 
+//     $y = $xsquare +  $x - 2;
+//     echo "$y |";
+// }
+
+$a = 0;
+while ($a < 10) {
+    $a++;
+    echo "$a\n";
 }

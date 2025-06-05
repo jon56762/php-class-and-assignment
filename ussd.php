@@ -36,6 +36,20 @@ while (true) {
                 $select = readline(": ");
                 if ($select == "") {
                     exit('Try again');
+                }elseif ($select == 1) {
+                    echo "Ooops. You are not qualified for My Area Offer. Dial *312*8# for 1GB @N350.\n";
+                    break;
+                } elseif ($select == 2) {
+                    echo "1 Daily Plans\n";
+                    echo "2 Binge Plans\n";
+                    echo "3 Weekly Plans\n";
+                    echo "4 Monthly Plans\n";
+                    echo "5 Big Monthly Plans\n";
+                    echo "6 3Months+ Plans\n";
+                    echo "7 Social Plans\n";
+                    echo "8 Everyday Plans\n";
+                    echo "22 Back\n";
+                    echo "0 Menu\n";
                 }
                 break;
             default:

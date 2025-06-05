@@ -9,6 +9,7 @@ $frequency = [3,4,4,8,5,8];
 echo "fx |";
 $fx = 0;
 while ($fx <= 0) {
+    // the calculation of fx
     $fx++;
     $fx1 = $score[0] * $frequency[0];
     $fx2= $score[1] * $frequency[1];
@@ -26,7 +27,7 @@ while ($fx <= 0) {
     echo "\n";
 
     echo "d |";
-
+    //the calculation of difference
     $d1 = $score[0] - $frequency[0] ;
     $d2 = $score[1] - $frequency[0] ;
     $d3 = $score[2] - $frequency[0] ;
@@ -43,6 +44,7 @@ while ($fx <= 0) {
     echo "\n";
 
     echo "dsquare: |";
+    // the calculation of d-square
 
     $dsquare1 = $d1 * $d1;
     $dsquare2 = $d2 * $d2;
@@ -60,6 +62,8 @@ while ($fx <= 0) {
     echo "\n";
 
     echo "fdsquare |";
+
+    // the calculation of fd-square
 
     $fd1 = $frequency[0] * $dsquare1;
     $fd2 = $frequency[1] * $dsquare2;

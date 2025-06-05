@@ -48,7 +48,7 @@ while (true) {
             if (!empty($foundstate)) {
                 echo "States with '$mineral' " . implode(',', $foundstate). "\n";
             } else {
-                echo "State with '$mineral' Not Found!";
+                echo "State with '$mineral' Not Found!\n";
             }
             
             break;
